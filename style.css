@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+.card .icons{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    top: -3%;
+    right: 15px;
+    transition: all 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+.card .icons a{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fff;
+}
+.card .onsale .badge{
+    background: #000;
+    font-size: 12px;
+    padding: 5px 15px;
+    top: 0px;
+    clip-path: polygon(61% 0, 100% 50%, 61% 100%, 0% 100%, 0 53%, 0% 0%);
+    position: absolute;
+}
+.card img{
+    width: 100%;
+    object-fit: cover;
+    box-shadow:  0 33px 61px -29px rgba(0 0 0 / 26%);
+}
+.card.is-hover .icons{
+    transform: rotateY('3%');
+    top: 3%;
+    opacity: 1;
+}
+.card .cart-btn{
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
+    transition: all 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+.card.is-hover .cart-btn{
+    opacity: 1;
+}
